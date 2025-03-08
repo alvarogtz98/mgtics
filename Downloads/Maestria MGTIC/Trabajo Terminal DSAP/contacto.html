@@ -29,32 +29,45 @@
       <main class="container">
     <h2> Registro Paciente </h2>
     <div class="mb-3">
-        <label> Nombre  Paciente</label>
-        <input class="form-control" type="text">
+        <label> Nombre Paciente</label>
+        <input class="form-control" type="text" id="txtNombrePaciente">
     </div>
     <div class="mb-3">
         <label> Edad </label>
-        <input class="form-control" type="number">
+        <input class="form-control" type="number" id="txtEdad">
     </div>
     <div class="mb-3">
         <label> Sexo </label>
-        <input class="form-control" type="text">
+        <input class="form-control" type="text" id="txtSexo"> 
+    </div>
+    <div class="=mb-3">
+      <label> Direccion </label>
+      <input class="form-control" type="text" id="txtDireccion"> 
     </div>
     <div class="mb-3">
         <label> Telefono </label>
-        <input class="form-control" type="text">
+        <input class="form-control" type="text" id="txtTelefono"> 
     </div>
+    <div class="mb-3">
+      <label> Fuma </label>
+      <input class="form-control" type="text" id="txtFuma"> 
     <div> 
         <label> Correo Electronico </label>
-        <input class="form-control" type="text">
+        <input class="form-control" type="text" id="txtCorreo-Electronico">
         <div> 
+    <div class="=mb-3"> 
+      <label> Observaciones </label>
+      <input class="form-control" type="text" id="txtObservaciones"> </div>
           <label> Servicio a Realizar </label>
-          <input class="form-control" type="text">
+          <input class="form-control" type="text" id="txtServicio-a-Realizar">
+
     <div class="mb-3">
-        <button clas="btn btn-primary"> Registrar</button>
+        <button clas="btn btn-primary" onclick="Registrar()"> Registrar</button>
     </div>
 </main>
 
-<script src="script/script.js"></script>
+<div id="list"></div>
+
+<script src="script/register.js"></script>
 </body>
 </html>
