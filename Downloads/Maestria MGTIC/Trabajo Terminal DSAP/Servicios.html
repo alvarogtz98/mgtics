@@ -1,81 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipo</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="mystyle.css">
-    <title>Document</title>
+    <style>
+        /* Efecto hover en las imágenes */
+        .card img {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Efecto en los botones */
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="menu-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="skills.html">Skills</a>
-        <a href="Equipo.html">Equipo</a>
-        <a href="Servicios.html">Servicios</a>
-        <a href="contacto.html">Contact</a>
+     <!-- Navbar -->
+     <nav class="menu-nav">
+        <a href="index.html" >Home</a>
+        <a href="equipo.html"  >Equipo</a>
+        <a href="servicios.html" class="active">Servicios</a>
+        <a href="contacto.html">Contacto</a>
     </nav>
-    <div class="main-flex">
-        <header>
-            <div class="my-info">
 
-                <h1>Servicios</h1>
-
-            </div>
-        </header>
-        <main>
-            <div class="">
-                <table>
-                    <thead>
+    <header>
+        <div class="my-info">
+            <h1>Equipo</h1>
+        </div>
+    </header>
+    <!-- Contenido Principal -->
+    <main class="container">
+        <!-- Tabla de Servicios -->
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered text-center align-middle">
+                <thead class="table-info">
+                    <tr>
                         <th>No</th>
                         <th>Servicio</th>
                         <th>Precio</th>
                         <th>Factura</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Limpieza</td>
-                            <td>700</td>
-                            <td>Formato Factura</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Extracciones</td>
-                            <td>2000</td>
-                            <td>Formato Factura</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Blanqueamiento</td>
-                            <td>3000</td>
-                            <td>Formato Factura</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Coronas</td>
-                            <td>2000</td>
-                            <td>Formato Factura</td>
-                        </tr>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Limpieza</td>
+                        <td>$700</td>
+                        <td><a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-receipt"></i> Ver Factura</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Extracciones</td>
+                        <td>$2000</td>
+                        <td><a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-receipt"></i> Ver Factura</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Blanqueamiento</td>
+                        <td>$3000</td>
+                        <td><a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-receipt"></i> Ver Factura</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Coronas</td>
+                        <td>$2000</td>
+                        <td><a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-receipt"></i> Ver Factura</a></td>
+                    </tr>
+                    <tr>
                         <td>5</td>
                         <td>Carillas</td>
-                        <td>2500</td>
-                        <td>Formato Factura</td>
-                    </tbody>
-                </table>
-            </div>
-            <div>
-                <div>
-                    
-                        <a class="publication-link" href="#">Telefono 686 115 20 39</a>
-                        <a class="publication-link" href="#">Ubicacion</a>
-                        <a class="publication-link" href="#">Generar Cita</a>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
+                        <td>$2500</td>
+                        <td><a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-receipt"></i> Ver Factura</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Botones de Contacto -->
+        <div class="d-flex justify-content-center gap-3 mt-4 contact-buttons">
+            <a href="tel:6861152039" class="btn btn-primary btn-lg">
+                <i class="bi bi-telephone me-2"></i> Llamar: 686 115 20 39
+            </a>
+            <a href="#" class="btn btn-success btn-lg">
+                <i class="bi bi-geo-alt me-2"></i> Ubicación
+            </a>
+            <a href="contacto.html" class="btn btn-danger btn-lg">
+                <i class="bi bi-calendar-check me-2"></i> Generar Cita
+            </a>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

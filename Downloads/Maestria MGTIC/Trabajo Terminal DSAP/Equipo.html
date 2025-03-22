@@ -1,76 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipo</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="mystyle.css">
-    <title>Document</title>
+    <style>
+        /* Efecto hover en las imágenes */
+        .card img {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Efecto en los botones */
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="menu-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="Skills.html">Skills</a>
-        <a href="Equipo.html">Equipo</a>
-        <a href="Servicios.html">Servicios</a>
+     <!-- Navbar -->
+     <nav class="menu-nav">
+        <a href="index.html" >Home</a>
+        <a href="equipo.html" class="active" >Equipo</a>
+        <a href="servicios.html">Servicios</a>
         <a href="contacto.html">Contacto</a>
     </nav>
-    <div class="tabla-container">
-        <main>
-            <h1> Equipo</h1>
-            <table>
-                <thead>
+
+    <header>
+        <div class="my-info">
+            <h1>Equipo</h1>
+        </div>
+    </header>
+
+    <!-- Tabla de Dentistas -->
+    <main class="container mt-4">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover text-center align-middle">
+                <thead class="table-primary">
                     <tr>
-                        <h2>Dentistas</h2>
-
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Dentista</th>
-                                    <th>Especialidad</th>
-                                    <th>Años Ejerciendo</th>
-                                    <th>Enlace</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Navid Gutierrez</td>
-                                    <td>Especialidad en Implantes</td>
-                                    <td>10</td>
-                                    <td><a href="https://miportafolio.com/landing" target="_blank">Ver Trayectoria</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Andrea Sanchez</td>
-                                    <td>Especialidad En Ortodoncia.</td>
-                                    <td>5</td>
-                                    <td><a href="https://miportafolio.com/tareas" target="_blank">Trayectoria</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Alfredo Jimenez</td>
-                                    <td>Perodoncia</td>
-                                    <td>7</td>
-                                    <td><a href="https://miportafolio.com/ecommerce" target="_blank">Trayectoria</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-        </main>
-    </div><div class="image-container">
-        <div class="image-box">
-            <p class="image-desc">Promociones</p>
-            <img src="promociones.jpg" alt="Imagen 1">
+                        <th>Dentista</th>
+                        <th>Especialidad</th>
+                        <th>Años Ejerciendo</th>
+                        <th>Trayectoria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Navid Gutierrez</td>
+                        <td>Implantes Dentales</td>
+                        <td>10</td>
+                        <td>
+                            <a href="https://miportafolio.com/landing" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="bi bi-box-arrow-up-right"></i> Ver
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Andrea Sanchez</td>
+                        <td>Ortodoncia</td>
+                        <td>5</td>
+                        <td>
+                            <a href="https://miportafolio.com/tareas" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="bi bi-box-arrow-up-right"></i> Ver
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Alfredo Jimenez</td>
+                        <td>Periodoncia</td>
+                        <td>7</td>
+                        <td>
+                            <a href="https://miportafolio.com/ecommerce" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="bi bi-box-arrow-up-right"></i> Ver
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="image-box">
-            <p class="image-desc">Tips Dentales</p>
-            <img src="tips.jpg" alt="Imagen 2">
-        </div>
-        <div class="image-box">
-            <p class="image-desc">Aseguranzas</p>
-            <img src="aseguranzas.jpg" alt="Imagen 3">
-        </div>
-    </div>
 
+        <!-- Galería de Cards con Efectos -->
+        <div class="container mt-5">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="card shadow-lg border-0">
+                        <img src="promociones.jpg" class="card-img-top rounded" alt="Promociones">
+                        <div class="card-body">
+                            <h5 class="card-title">Promociones</h5>
+                            <p class="card-text">Aprovecha nuestras ofertas en tratamientos dentales.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-lg border-0">
+                        <img src="tips.jpg" class="card-img-top rounded" alt="Tips Dentales">
+                        <div class="card-body">
+                            <h5 class="card-title">Tips Dentales</h5>
+                            <p class="card-text">Consejos para mantener tu sonrisa saludable.</p>
+                            <a href="#" class="btn btn-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-lg border-0">
+                        <img src="aseguranzas.jpg" class="card-img-top rounded" alt="Aseguranzas">
+                        <div class="card-body">
+                            <h5 class="card-title">Aseguranzas</h5>
+                            <p class="card-text">Conoce los seguros dentales que aceptamos.</p>
+                            <a href="#" class="btn btn-primary">Más info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
